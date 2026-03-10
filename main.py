@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Task Lab</title>
+  </head>
+  <body>
+    <h1>My Page</h1>
+
+    <input type="button" id="alertBtn" value="alert" onclick="alertFun()"/>
+    <input type="button" value="confirm" onclick="confirmFun()"/>
+    <input type="button" value="prompt" onclick="promptFun()"/>
+
+    <span id="result"></span>
+
+
+
+    <script>
+      function alertFun() {
+
+        
+        
+
+        alert("Hello Toni!");
+
+      }
+
+
+      function confirmFun() {
+
+
+        let didConfirm = confirm("Are you sure about that?");
+
+
+        if (didConfirm) {
+
+          alert("You confirmed :)");
+
+        } else {
+
+          alert("You did not confirm :(");
+
+        }
+      }
+
+      function promptFun() {
+        let val=prompt("What is your name?");
+
+        alert(`You've entered: ${val}`);
+
+      }
+
+      console.log(window.navigator.cookieEnabled);
+      
+      console.log(window.navigator.onLine);
+
+      console.log(navigator.appVersion);
+
+      console.log(navigator.userAgent);
+
+      console.log(navigator.platform);
+
+
+      console.log(window.location.href);
+
+      console.log(window.location.protocol);
+
+      console.log(window.location.hostname);
+
+
+      window.onload = function() {
+        console.log("Page has loaded");
+
+      };
+
+
+      const result = document.querySelector('#result');
+
+      result.innerHTML ='<h2>My Span</h2>';
+
+      result.style.color ='blue';
+
+      let myobj={ name: "Jordan" };
+      let obj2 = myobj;
+      obj2.name = "Shelly";
+
+      let obj3 = {};
+
+      Object.assign(obj3, myobj);
+
+      obj3.name ="Smith";
+
+      console.log(myobj.name, obj3.name);
+    </script>
+  </body>
+</html>
